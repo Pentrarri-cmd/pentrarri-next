@@ -59,3 +59,16 @@
 - Activity-Items wires Side-Panel
 
 **Nächste Etappe (E):** Nach Michaels Feedback — vermutlich Hochzeit-Demo rüberziehen oder Kontaktformular
+
+## Etappe E — Story-Sektionen für die Landingpage
+**Status:** ✅ Abgeschlossen am 2026-05-19
+
+- WhyPentrarri-Sektion: 4 Differenzierungs-Pillars (Maßgeschneidert / Eine Person / Webseite+Software / Premium-Stack)
+- HowWeWork-Sektion: 5 Prozess-Steps mit Duration-Labels (Anfrage → Konzept → Sprint-Bau → Launch → Support)
+- BehindPentrarri-Sektion: Michael als Gesicht in "Ich"-Sprache, asymmetrisches Layout mit Eckdaten-Card
+- Contact-Sektion: Email- und Phone-CTA mit Hover-Effekten, Glow-Background, kein Formular (kommt in Etappe F)
+- Header-Nav um "Prozess" erweitert (jetzt 4 Items)
+- Section-Reihenfolge auf Home: Hero → Services → Warum → Prozess → Showcase → Hinter Pentrarri → Kontakt
+- Tonalität-Wechsel: Default "Wir", nur BehindPentrarri spricht in "Ich"
+
+**Nächste Etappe (F):** Vermutlich Kontaktformular mit Cloudflare Worker + Resend (jetzt wo die Sektion und der Anker stehen)
