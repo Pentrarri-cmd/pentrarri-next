@@ -43,3 +43,19 @@
 - Showcase-Preview-Sektion auf Home mit Mock-Dashboard-Vorschau
 
 **Nächste Etappe (D):** Nach Michaels Feedback — vermutlich Hochzeit-Demos rüberziehen oder weitere SaaS-Demo
+
+## Etappe D — Sartoria Hub voll interaktiv
+**Status:** ✅ Abgeschlossen am 2026-05-19
+
+- Mock-Daten erweitert: Auftragsdetails (Timeline, Notizen, Termin, totalPrice, paid), 11 Kunden mit Profilen
+- State-Architektur: Client-Wrapper SartoriaHubApp mit useState für View / Selected Order / Modal
+- Sidebar controlled: 3 echte Views switching + 4 Coming-Soon-Placeholder
+- Dashboard-View extrahiert, Pipeline und Activity klickbar
+- OrderDetailPanel: Slide-in von rechts mit Timeline, Termin, Notizen, Status-Verlauf, ESC + Click-Outside
+- Aufträge-View: Vollansicht mit 6 Status-Filter-Tabs (Tabellen-Layout)
+- Kunden-View: 11 Cards mit Tier-Filter (Alle/VIP/Aktiv/Neu)
+- NewOrderModal: 3-Step-Form (Kunde → Item/Stoff → Bestätigen) mit Success-State
+- "Alle ansehen →" Wire zur Aufträge-View
+- Activity-Items wires Side-Panel
+
+**Nächste Etappe (E):** Nach Michaels Feedback — vermutlich Hochzeit-Demo rüberziehen oder Kontaktformular
