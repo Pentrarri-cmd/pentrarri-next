@@ -25,3 +25,21 @@
 - Header bekommt smooth Scroll-Blur-Transition
 
 **Nächste Etappe (C):** Nach Michaels Feedback — vermutlich Detail-Polish + Showcase-Bereich
+
+## Etappe C — Wordmark, Polish, Showcase-Routing, SaaS-Mockup Sartoria Hub
+**Status:** ✅ Abgeschlossen am 2026-05-18
+
+- Wordmark "Pentrarri — GROUP" inline mit Gold-Akzent ersetzt Pferd-Logo
+- Polish: bg-elevated heller (#1a1a1a), Mono-Stats-Separators in Hero
+- Routing-Setup für /showcase/* mit Übersichtsseite
+- Demo-Banner-Komponente für alle künftigen Showcase-Demos
+- Erste Showcase-Demo: "Sartoria Hub" — fiktives Order-Management für Falcone Sartoria (Maßmanufaktur)
+  - Sidebar mit Navigation
+  - TopBar mit Datum, Suche, Notifications, "+ Neuer Auftrag"
+  - 4 KPI-Cards mit Mock-Daten
+  - Pipeline-Kanban mit 5 Status-Spalten und 11 Aufträgen
+  - Activity-Timeline mit 6 Events
+- Mock-Daten in `src/data/sartoria-hub.ts`
+- Showcase-Preview-Sektion auf Home mit Mock-Dashboard-Vorschau
+
+**Nächste Etappe (D):** Nach Michaels Feedback — vermutlich Hochzeit-Demos rüberziehen oder weitere SaaS-Demo
