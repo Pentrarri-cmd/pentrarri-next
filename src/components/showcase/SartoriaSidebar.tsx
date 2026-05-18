@@ -1,21 +1,24 @@
 'use client';
 
-import { useState } from 'react';
 import { sartoriaData } from '@/data/sartoria-hub';
+import type { ViewId } from './SartoriaHubApp';
 
-const navItems = [
-  { icon: '▣', label: 'Dashboard' },
-  { icon: '⌗', label: 'Aufträge' },
-  { icon: '○', label: 'Kunden' },
-  { icon: '▦', label: 'Sartoria' },
-  { icon: '◷', label: 'Termine' },
-  { icon: '↗', label: 'Analytics' },
-  { icon: '⚙', label: 'Einstellungen' },
+const navItems: Array<{ id: ViewId; icon: string; label: string }> = [
+  { id: 'dashboard', icon: '▣', label: 'Dashboard' },
+  { id: 'orders', icon: '⌗', label: 'Aufträge' },
+  { id: 'customers', icon: '○', label: 'Kunden' },
+  { id: 'sartoria', icon: '▦', label: 'Sartoria' },
+  { id: 'appointments', icon: '◷', label: 'Termine' },
+  { id: 'analytics', icon: '↗', label: 'Analytics' },
+  { id: 'settings', icon: '⚙', label: 'Einstellungen' },
 ];
 
-export function SartoriaSidebar() {
-  const [activeIndex, setActiveIndex] = useState(0);
+interface SartoriaSidebarProps {
+  activeView: ViewId;
+  onViewChange: (view: ViewId) => void;
+}
 
+export function SartoriaSidebar({ activeView, onViewChange }: SartoriaSidebarProps) {
   return (
     <aside className="hidden w-60 shrink-0 border-r border-ink-soft/30 lg:block">
       <div className="sticky top-12 px-6 py-8">
@@ -30,19 +33,19 @@ export function SartoriaSidebar() {
 
         <nav>
           <ul className="space-y-1">
-            {navItems.map((item, i) => (
-              <li key={item.label}>
+            {navItems.map((item) => (
+              <li key={item.id}>
                 <button
-                  onClick={() => setActiveIndex(i)}
+                  onClick={() => onViewChange(item.id)}
                   className={`group flex w-full items-center gap-3 rounded-md px-3 py-2 text-sm transition-all ${
-                    i === activeIndex
+                    activeView === item.id
                       ? 'bg-bg-elevated text-ink'
                       : 'text-ink-muted hover:bg-bg-elevated/50 hover:text-ink'
                   }`}
                 >
                   <span
                     className={`font-mono text-base ${
-                      i === activeIndex
+                      activeView === item.id
                         ? 'text-gold'
                         : 'text-ink-soft group-hover:text-ink-muted'
                     }`}
