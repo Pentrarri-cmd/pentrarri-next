@@ -3,7 +3,12 @@
 import { motion } from 'framer-motion';
 import { sartoriaData } from '@/data/sartoria-hub';
 
-export function SartoriaPipeline() {
+interface SartoriaPipelineProps {
+  onOrderClick: (orderId: string) => void;
+  onShowAll: () => void;
+}
+
+export function SartoriaPipeline({ onOrderClick, onShowAll }: SartoriaPipelineProps) {
   return (
     <div>
       <div className="mb-6 flex items-center justify-between">
@@ -15,7 +20,10 @@ export function SartoriaPipeline() {
             Aktuelle Aufträge
           </h2>
         </div>
-        <button className="font-mono text-[10px] uppercase tracking-mono-label text-ink-muted transition-colors hover:text-gold">
+        <button
+          onClick={onShowAll}
+          className="font-mono text-[10px] uppercase tracking-mono-label text-ink-muted transition-colors hover:text-gold"
+        >
           Alle ansehen →
         </button>
       </div>
@@ -46,6 +54,7 @@ export function SartoriaPipeline() {
               {column.orders.map((order) => (
                 <button
                   key={order.id}
+                  onClick={() => onOrderClick(order.id)}
                   className="group rounded-lg border border-ink-soft/30 bg-bg-elevated p-4 text-left transition-all hover:border-gold/30 hover:bg-bg-soft"
                 >
                   <div className="flex items-center justify-between">

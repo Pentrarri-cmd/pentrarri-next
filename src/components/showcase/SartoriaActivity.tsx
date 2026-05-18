@@ -9,7 +9,11 @@ const toneColors = {
   info: 'bg-ink-muted',
 };
 
-export function SartoriaActivity() {
+interface SartoriaActivityProps {
+  onOrderClick: (orderId: string) => void;
+}
+
+export function SartoriaActivity({ onOrderClick }: SartoriaActivityProps) {
   return (
     <div>
       <div className="mb-6">
@@ -21,14 +25,16 @@ export function SartoriaActivity() {
         </h2>
       </div>
 
-      <div className="rounded-xl border border-ink-soft/30 bg-bg-elevated/50">
+      <div className="overflow-hidden rounded-xl border border-ink-soft/30 bg-bg-elevated/50">
         {sartoriaData.activity.map((event, i) => (
-          <motion.div
+          <motion.button
             key={i}
+            type="button"
+            onClick={() => onOrderClick(event.target)}
             initial={{ opacity: 0, x: -10 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.4, delay: i * 0.06 }}
-            className={`flex items-start gap-4 p-4 transition-colors hover:bg-bg-elevated ${
+            className={`flex w-full cursor-pointer items-start gap-4 p-4 text-left transition-colors hover:bg-bg-elevated ${
               i !== sartoriaData.activity.length - 1 ? 'border-b border-ink-soft/20' : ''
             }`}
           >
@@ -45,7 +51,7 @@ export function SartoriaActivity() {
                 <span className="font-mono text-gold">{event.target}</span>
               </div>
             </div>
-          </motion.div>
+          </motion.button>
         ))}
       </div>
     </div>
