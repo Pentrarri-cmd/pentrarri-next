@@ -11,7 +11,7 @@ const config: Config = {
       colors: {
         bg: {
           DEFAULT: '#0a0a0a',
-          elevated: '#161616',
+          elevated: '#1a1a1a',
           soft: '#202020',
         },
         ink: {

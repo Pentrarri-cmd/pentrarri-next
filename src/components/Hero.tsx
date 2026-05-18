@@ -91,16 +91,19 @@ export function Hero() {
           >
             <div className="flex items-center gap-2">
               <span className="h-1.5 w-1.5 rounded-full bg-gold animate-pulse" />
-              Live aus Butzbach
+              <span>Live aus Butzbach</span>
             </div>
+            <span className="text-ink-soft">·</span>
             <div>
               <span className="text-ink">99.9%</span> Uptime
             </div>
+            <span className="text-ink-soft">·</span>
             <div>
               <span className="text-ink">Edge</span> Performance
             </div>
+            <span className="text-ink-soft">·</span>
             <div>
-              <span className="text-ink">DSGVO</span> · Self-Hosted
+              <span className="text-ink">DSGVO</span> Self-Hosted
             </div>
           </motion.div>
         </motion.div>

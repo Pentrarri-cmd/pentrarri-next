@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Container } from './Container';
 
@@ -38,17 +37,14 @@ export function Header() {
             href="/"
             className="group flex items-center gap-3 transition-opacity hover:opacity-80"
           >
-            <div className="relative h-7 w-7">
-              <Image
-                src="/logo.webp"
-                alt="Pentrarri Group"
-                width={28}
-                height={28}
-                className="object-contain transition-all duration-500 group-hover:rotate-12"
-              />
-            </div>
             <span className="font-sans text-base font-medium tracking-tight text-ink">
               Pentrarri
+            </span>
+            <span className="font-mono text-xs text-ink-muted transition-colors group-hover:text-ink-muted">
+              —
+            </span>
+            <span className="font-mono text-xs font-medium uppercase tracking-mono-label text-gold transition-colors group-hover:text-gold-glow">
+              Group
             </span>
           </Link>
 
