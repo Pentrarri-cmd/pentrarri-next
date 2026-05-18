@@ -6,6 +6,7 @@ import { Container } from './Container';
 
 const navItems = [
   { label: 'Leistungen', href: '#leistungen' },
+  { label: 'Prozess', href: '#prozess' },
   { label: 'Showcase', href: '#showcase' },
   { label: 'Kontakt', href: '#kontakt' },
 ];
