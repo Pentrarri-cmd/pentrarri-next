@@ -11,17 +11,18 @@ const config: Config = {
       colors: {
         bg: {
           DEFAULT: '#0a0a0a',
-          elevated: '#141414',
-          soft: '#1c1c1c',
+          elevated: '#161616',
+          soft: '#202020',
         },
         ink: {
           DEFAULT: '#f5f5f5',
-          muted: '#888888',
-          soft: '#555555',
+          muted: '#a0a0a0',
+          soft: '#666666',
         },
         gold: {
           DEFAULT: '#d4af37',
           glow: '#f0d878',
+          dim: '#8a7228',
         },
         glow: {
           purple: '#6b46c1',
@@ -33,9 +34,9 @@ const config: Config = {
         mono: ['var(--font-mono)', 'monospace'],
       },
       fontSize: {
-        'display-xl': ['clamp(3.5rem, 8vw, 7rem)', { lineHeight: '0.95', letterSpacing: '-0.02em' }],
-        'display-lg': ['clamp(2.5rem, 5vw, 4.5rem)', { lineHeight: '1.0', letterSpacing: '-0.015em' }],
-        'display-md': ['clamp(1.875rem, 3vw, 2.75rem)', { lineHeight: '1.1', letterSpacing: '-0.01em' }],
+        'display-xl': ['clamp(2.75rem, 6vw, 5.5rem)', { lineHeight: '1.0', letterSpacing: '-0.03em' }],
+        'display-lg': ['clamp(2rem, 4vw, 3.5rem)', { lineHeight: '1.05', letterSpacing: '-0.025em' }],
+        'display-md': ['clamp(1.5rem, 2.5vw, 2.25rem)', { lineHeight: '1.15', letterSpacing: '-0.015em' }],
       },
       letterSpacing: {
         'mono-label': '0.18em',
