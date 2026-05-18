@@ -77,13 +77,14 @@ export function NewOrderModal({ onClose }: NewOrderModalProps) {
         className="fixed inset-0 z-50 bg-bg/70 backdrop-blur-sm"
       />
 
-      <motion.div
-        initial={{ opacity: 0, scale: 0.95, y: 20 }}
-        animate={{ opacity: 1, scale: 1, y: 0 }}
-        exit={{ opacity: 0, scale: 0.95, y: 20 }}
-        transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-        className="fixed left-1/2 top-1/2 z-50 w-[calc(100%-2rem)] max-w-2xl -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-xl border border-ink-soft/30 bg-bg-elevated shadow-2xl"
-      >
+      <div className="pointer-events-none fixed inset-0 z-50 flex items-center justify-center p-4">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95, y: 20 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          exit={{ opacity: 0, scale: 0.95, y: 20 }}
+          transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+          className="pointer-events-auto w-full max-w-2xl overflow-hidden rounded-xl border border-ink-soft/30 bg-bg-elevated shadow-2xl"
+        >
         {isSubmitted ? (
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -268,7 +269,8 @@ export function NewOrderModal({ onClose }: NewOrderModalProps) {
             </div>
           </>
         )}
-      </motion.div>
+        </motion.div>
+      </div>
     </>
   );
 }
