@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { instrumentSerif, geistSans, geistMono } from './fonts';
+import { inter, jetbrainsMono } from './fonts';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html
       lang="de"
-      className={`${instrumentSerif.variable} ${geistSans.variable} ${geistMono.variable}`}
+      className={`${inter.variable} ${jetbrainsMono.variable}`}
     >
       <body>{children}</body>
     </html>

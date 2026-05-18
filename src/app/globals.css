@@ -22,8 +22,9 @@
     @apply font-mono text-xs uppercase tracking-mono-label text-ink-muted;
   }
 
-  .display-italic {
-    @apply font-display italic text-gold;
+  .display-accent {
+    @apply text-gold;
+    font-feature-settings: 'ss01', 'cv11';
   }
 
   .glow-gold {
