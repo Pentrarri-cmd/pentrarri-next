@@ -72,3 +72,23 @@
 - Tonalität-Wechsel: Default "Wir", nur BehindPentrarri spricht in "Ich"
 
 **Nächste Etappe (F):** Vermutlich Kontaktformular mit Cloudflare Worker + Resend (jetzt wo die Sektion und der Anker stehen)
+
+## Etappe F — Apple-Style Cinematic Test-Version unter /v2
+**Status:** ✅ Abgeschlossen am 2026-05-19
+
+- Komplette zweite Landingpage-Variante unter `/v2` parallel zur produktiven `/`
+- 7 Sektionen, alle gepinnt mit `position: sticky` und Scroll-Choreographie
+- HeroV2: 3 Wörter sliden nacheinander rein (links/rechts/unten), Glow expandiert von 0.5x auf 2.5x
+- ServicesV2: Card-Cycling, jeweils eine Service-Card zentriert sichtbar, Progress-Pills unten
+- WhyPentrarriV2: Horizontal-Scroll innerhalb vertikalem Pinning (4 Pillars, vertikaler Scroll → horizontale Translation)
+- HowWeWorkV2: Sequential Step-Reveal mit gigantischen Mono-Numbers (180-260px), fünf Steps zentriert
+- ShowcaseV2: Sartoria-Hub-Card mit 3D-Scale-Effekt (rotateX 25° → 0°, scale 0.5 → 1.0)
+- BehindPentrarriV2: Sentence-by-Sentence Reveal (Opacity 0.15 → 1, Scale 0.95 → 1)
+- ContactV2: Massiv expandierender Glow + slide-in CTAs (links/rechts)
+
+**Limitations:**
+- Mobile-Verhalten nicht optimiert — Pinning + Horizontal-Scroll auf iOS Safari kann unsauber sein
+- Reduced-Motion-Fallback noch nicht implementiert
+- Hook-Calls in `.map()` für HowWeWorkV2 und BehindPentrarriV2 sind über `eslint-disable react-hooks/rules-of-hooks` umgangen (statische const-Arrays, am Runtime sicher)
+
+**Nächste Etappe (G):** Nach Michaels Feedback — entweder /v2 Polish, Mobile-Optimierung, oder zurück zu /-Polish/Formular
